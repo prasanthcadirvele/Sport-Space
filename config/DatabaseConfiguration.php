@@ -4,10 +4,10 @@ namespace config;
 
 class DatabaseConfiguration
 {
-    private $localhost;
-    private $id20752598_sports_court_28;
-    private $id20752598_sport_court_28;
-    private $Password1@;
+    private $host;
+    private $dbname;
+    private $username;
+    private $password;
 
     /**
      * @param $host
@@ -17,10 +17,10 @@ class DatabaseConfiguration
      */
     public function __construct()
     {
-        $this->host = "db4free.net";
-        $this->dbname = "sports_court_28";
-        $this->username = "sport_court_28";
-        $this->password = "password";
+        $this->host = "localhost";
+        $this->dbname = "id20752598_sports_court_28";
+        $this->username = "id20752598_sport_court_28";
+        $this->password = "Password1@";
     }
 
     /**
