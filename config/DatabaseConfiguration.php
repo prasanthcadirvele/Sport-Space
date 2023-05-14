@@ -4,10 +4,10 @@ namespace config;
 
 class DatabaseConfiguration
 {
-    private $host;
-    private $dbname;
-    private $username;
-    private $password;
+    private $localhost;
+    private $id20752598_sports_court_28;
+    private $id20752598_sport_court_28;
+    private $Password1@;
 
     /**
      * @param $host
