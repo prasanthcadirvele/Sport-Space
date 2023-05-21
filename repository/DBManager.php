@@ -208,7 +208,7 @@ class DBManager {
         }
     }
 
-    public function getAllReservationsByUser($username): array {
+    public function getAllReservationsByUser($username) {
         $this->getConnection();
 
         $query = "SELECT * FROM Reservations WHERE username = :username";
@@ -443,7 +443,6 @@ class DBManager {
 
         if ($result){
             $court_id = $result['court_id'];
-            var_dump($court_id);
             // Make the reservation
             $stmt = $this->pdo->prepare("INSERT INTO Reservations 
                             (username, court_id, reservation_debut, reservation_fin, nombre_de_personnes) 

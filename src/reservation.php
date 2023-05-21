@@ -3,8 +3,9 @@
 require_once '../repository/DBManager.php';
 
 session_start();
+error_reporting(0);
 
-if(!isset($_SESSION['username']) && !$_SESSION['user_logged_in']) {
+if(!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit();
 }

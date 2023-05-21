@@ -65,7 +65,8 @@ $reservations = $dbManager->getAllReservationsByUser($_SESSION['username']);
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($reservations as $reservation): ?>
+                <?php if($reservations != null){
+                    foreach ($reservations as $reservation): ?>
                     <tr>
                         <td><?php echo $reservation->getCourt()->getCenter()->getName(); ?></td>
                         <td><?php echo $reservation->getCourt()->getCenter()->getAddress(); ?></td>
@@ -73,7 +74,7 @@ $reservations = $dbManager->getAllReservationsByUser($_SESSION['username']);
                         <td><?php echo $reservation->getReservationFin(); ?></td>
                         <td><?php echo $reservation->getNombreDePersonnes()*$reservation->getCourt()->getPrixUnitaireParHeure(); ?></td>
                     </tr>
-                <?php endforeach; ?>
+                <?php endforeach; } ?>
                 </tbody>
             </table>
         </div>
